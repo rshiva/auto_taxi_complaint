@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fly_destination: false
+  from_to: MyString
+  excess_charged: false
+  indecent_behaviour: false
+  charged_and_allowed_other_complainant: false
+  charged_for_luggage: 1
+  from_to: MyString
+  bus_stop_name: MyString
+  other_complaints: MyString
+  occurence_date_time: 2013-04-13 14:01:30
+  place_occurence: MyString
+
+two:
+  fly_destination: false
+  from_to: MyString
+  excess_charged: false
+  indecent_behaviour: false
+  charged_and_allowed_other_complainant: false
+  charged_for_luggage: 1
+  from_to: MyString
+  bus_stop_name: MyString
+  other_complaints: MyString
+  occurence_date_time: 2013-04-13 14:01:30
+  place_occurence: MyString
