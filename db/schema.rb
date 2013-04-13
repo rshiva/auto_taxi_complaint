@@ -11,6 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130413065147) do
+
+  create_table "vehicles", :force => true do |t|
+    t.string   "type"
+    t.string   "number"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "vehicles", ["type"], :name => "index_vehicles_on_type"
 
 end
