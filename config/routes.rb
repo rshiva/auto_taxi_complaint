@@ -1,4 +1,7 @@
 AutoTaxiComplaint::Application.routes.draw do
+
+  resources :complaints
+  root :to => 'complaint#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

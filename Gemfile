@@ -25,6 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem "haml"
 #gem 'delayed_job', '2.1.4'
 
 # To use ActiveModel has_secure_password
