@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413084243) do
+ActiveRecord::Schema.define(:version => 20130414103959) do
 
   create_table "complaints", :force => true do |t|
     t.boolean  "fly_destination"
@@ -42,12 +42,12 @@ ActiveRecord::Schema.define(:version => 20130413084243) do
   end
 
   create_table "vehicles", :force => true do |t|
-    t.string   "type"
+    t.string   "vehicle_types"
     t.string   "number"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
-  add_index "vehicles", ["type"], :name => "index_vehicles_on_type"
+  add_index "vehicles", ["vehicle_types"], :name => "index_vehicles_on_type"
 
 end

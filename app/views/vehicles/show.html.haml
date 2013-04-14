@@ -1,0 +1,39 @@
+Mode of transportation
+%br/
+%strong
+	= @vehicle.vehicle_types
+%br/
+Vehicle Number
+%br
+%strong
+	= @vehicle.number
+%br/
+- @vehicle.complaints.each do |complaint|
+	= complaint.fly_destination if complaint.fly_destination
+	%br/
+	= complaint.from_to
+	%br/
+	= complaint.excess_charged  if complaint.excess_charged  
+	%br/
+	= complaint.indecent_behaviour if complaint.indecent_behaviour
+	%br/
+	= complaint.charged_and_allowed_other_complainant
+	%br/
+	= complaint.charged_for_luggage
+	%br/
+	= complaint.bus_stop_name
+	%br/
+	= complaint.occurence_date_time
+	%br/
+	= complaint.place_occurence
+	%br/
+
+
+
+
+
+
+
+
+
+
