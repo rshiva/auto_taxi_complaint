@@ -11,20 +11,20 @@
 
 $(function() {
 
-$("#vehicle_vehicle_types").change(function () {
-$("#vehicle_vehicle_types option:selected").each(function () {
-var selected_vehicle=$(this).text();
-if(selected_vehicle == "Bus"){
-	  console.log("if");
-    $("#bus_stop").show();
-}else
-{
-	console.log("else");
-	$("#bus_stop").hide();
-}
-})
+	$("#vehicle_vehicle_types").change(function () {
+	$("#vehicle_vehicle_types option:selected").each(function () {
+	var selected_vehicle=$(this).text();
+	if(selected_vehicle == "Bus"){
+	    $("#bus_stop").show();
+	}else
+	{
+		$("#bus_stop").hide();
+	}
+	})
 
-})
+	})
+
+	
 
 
 });

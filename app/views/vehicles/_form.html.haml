@@ -17,5 +17,5 @@
       = render :partial => "complaint_form", :locals => {:f => f}
     
     .actions
-      = f.submit 'Save',:class => "btn btn-primary"
+      = f.submit 'Save',:class => "btn btn-primary",:onclick => "return confirm('Please cross check the form .We will be sending You and RTO office a mail regarding the complaint')"
 
