@@ -20,7 +20,7 @@ class VehiclesController < ApplicationController
 
   def update
     @vehicle = Vehicle.find(params[:id])
-    if @vehicle.update_attributes(params[:survey])
+    if @vehicle.update_attributes(params[:complaint])
       redirect_to @vehicle, notice: "Successfully updated complaint."
     else
       render :edit
