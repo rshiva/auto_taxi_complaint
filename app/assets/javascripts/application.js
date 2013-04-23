@@ -24,6 +24,11 @@ $(function() {
 
 	})
 
+	$("#refused_checkbox").click(function(){
+		$(".refused_from_to").slideToggle();
+
+	})
+
 	
 
 

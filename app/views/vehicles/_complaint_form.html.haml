@@ -5,11 +5,13 @@
   = builder.label :occurence_date_time ,"Incident Date And  Time"
   = builder.datetime_select :occurence_date_time 
 
-  = builder.label :fly_destination, "Refused to go the required destination"
-  = builder.check_box :fly_destination
+  .required_destination
+    = builder.label :fly_destination, "Refused to go the required destination"
+    = builder.check_box :fly_destination , :id => "refused_checkbox"
 
-  = builder.label :from_to ,"From-To", :class => 'control-label'
-  = builder.text_field :from_to , :placeholder => "Example :Raghuleela Mall - Kandivili station"
+  .refused_from_to{:style => "display:none"}
+    = builder.label :from_to ,"From-To", :class => 'control-label'
+    = builder.text_field :from_to , :placeholder => "Example :Raghuleela Mall - Kandivili station"
 
   = builder.label :excess_charged
   = builder.check_box :excess_charged

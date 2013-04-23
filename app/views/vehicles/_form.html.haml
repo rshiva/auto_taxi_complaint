@@ -7,7 +7,7 @@
           %li= msg
   %fieldset
     = f.label :vehicle_types , "Mode of Transportation"
-    = f.select :vehicle_types , Vehicle.vehicle_types.collect {|p| p}, :id => "vehicle_types"
+    = f.select :vehicle_types , [["- Select a Mode-", nil]] + Vehicle.vehicle_types.collect {|p| p}, :id => "vehicle_types"
 
     = f.label :number , "Vehicle Number"
     = f.text_field :number
