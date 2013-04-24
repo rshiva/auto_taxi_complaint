@@ -1,3 +1,0 @@
-class VechicleController < ApplicationController
-	
-end
