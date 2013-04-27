@@ -3,10 +3,10 @@ class Complaint < ActiveRecord::Base
   								 :user_attributes , :vehicle_attributes
 
 
-belongs_to :user
-belongs_to :vehicle 
+	belongs_to :user
+	belongs_to :vehicle 
 
-accepts_nested_attributes_for :vehicle
-accepts_nested_attributes_for :user
+	accepts_nested_attributes_for :vehicle
+	accepts_nested_attributes_for :user
 
 end
