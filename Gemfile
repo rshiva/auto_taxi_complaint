@@ -41,6 +41,12 @@ gem "haml"
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+ group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+ end
+
 
 group :test do
   # Pretty printed test output

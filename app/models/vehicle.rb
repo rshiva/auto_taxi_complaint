@@ -2,7 +2,6 @@ class Vehicle < ActiveRecord::Base
   attr_accessible :number, :vehicle_types 
 
   has_many :complaints
-  accepts_nested_attributes_for :complaints
 
   validates :vehicle_types, :presence => true
   validates :number, :presence => true

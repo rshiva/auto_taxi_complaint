@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414103959) do
+ActiveRecord::Schema.define(:version => 20130427043410) do
 
   create_table "complaints", :force => true do |t|
     t.boolean  "fly_destination"
-    t.string   "from_to"
+    t.string   "from_to_fly"
     t.boolean  "excess_charged"
     t.boolean  "indecent_behaviour"
     t.boolean  "charged_and_allowed_other_complainant"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130414103959) do
     t.datetime "updated_at",                            :null => false
     t.integer  "user_id"
     t.integer  "vehicle_id"
+    t.string   "from_to_luggage"
   end
 
   add_index "complaints", ["user_id"], :name => "index_complaints_on_user_id"
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130414103959) do
     t.string   "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "vehicles", :force => true do |t|

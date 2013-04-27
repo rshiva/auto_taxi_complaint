@@ -1,5 +1,8 @@
 = f.fields_for :users do |builder|
   %fieldset
+    = builder.label :name , "Full Name"
+    = builder.text_field :name 
+
     = builder.label :email_id , "Email id"
     = builder.email_field :email_id 
 

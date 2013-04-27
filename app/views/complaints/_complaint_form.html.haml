@@ -10,8 +10,8 @@
     = builder.check_box :fly_destination , :id => "refused_checkbox"
 
   .refused_from_to{:style => "display:none"}
-    = builder.label :from_to ,"From-To", :class => 'control-label'
-    = builder.text_field :from_to , :placeholder => "Example :Raghuleela Mall - Kandivili station"
+    = builder.label :from_to_fly ,"From-To", :class => 'control-label'
+    = builder.text_field :from_to_fly , :placeholder => "Example :Raghuleela Mall - Kandivili station"
 
   = builder.label :excess_charged
   = builder.check_box :excess_charged
@@ -25,8 +25,8 @@
   = builder.label :charged_for_luggage , "Enter the Amount Excessively Charged for Luggage ", :class => 'control-label'
   = builder.text_field :indecent_behaviour , :class => 'text_field'
 
-  = builder.label :from_to , "From-To" ,:class => 'control-label'
-  = builder.text_field :from_to , :class => 'text_field', :placeholder => "Example: Ghatkopar Station - Chembur Station"
+  = builder.label :from_to_luggage , "From-To" ,:class => 'control-label'
+  = builder.text_field :from_to_luggage , :class => 'text_field', :placeholder => "Example: Ghatkopar Station - Chembur Station"
 
   .control{:id => "bus_stop",:style => "display:none"}
     = builder.label :bus_stop_name , "Bus Stop  Name where Bus didn't Stop", :class => 'control-label' 

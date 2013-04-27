@@ -5,9 +5,16 @@ class ComplaintsController < ApplicationController
 
 	def new
 		@complaint=Complaint.new
+		@complaint.build_vehicle
+		@complaint.build_user
+		respond_to do |format|
+	    format.html # new.html.erb
+  	  format.json { render json: @complaint }
+  	end
 	end
 
 	def create
+		puts "in"
 		@complaint=Complaint.new
 			if @complaint.save
 				redirect_to @complaint, notice: "Successfully created complaint."
