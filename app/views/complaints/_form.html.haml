@@ -19,4 +19,4 @@
       = render :partial => "user_form", :locals => {:f => f}
  
   .actions
-    = f.submit 'Save',:class => "btn btn-primary"
+    = f.submit 'submit',:url => complaints_path,:method => :post ,:class => "btn btn-primary"

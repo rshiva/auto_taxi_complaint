@@ -15,7 +15,7 @@ class ComplaintsController < ApplicationController
 
 	def create
 		puts "in"
-		@complaint=Complaint.new
+		@complaint=Complaint.new(params[:complaint])
 			if @complaint.save
 				redirect_to @complaint, notice: "Successfully created complaint."
 			else

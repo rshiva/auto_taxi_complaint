@@ -1,36 +1,35 @@
-= f.fields_for :complaints do |builder|
-  = builder.label :place_occurence , "Place Where The Incident Happened" ,:class => 'control-label'
-  = builder.text_field :place_occurence , :class => 'text_field'
+= f.label :place_occurence , "Place Where The Incident Happened" ,:class => 'control-label'
+= f.text_field :place_occurence , :class => 'text_field'
 
-  = builder.label :occurence_date_time ,"Incident Date And  Time"
-  = builder.datetime_select :occurence_date_time 
+= f.label :occurence_date_time ,"Incident Date And  Time"
+= f.datetime_select :occurence_date_time 
 
-  .required_destination
-    = builder.label :fly_destination, "Refused to go the required destination"
-    = builder.check_box :fly_destination , :id => "refused_checkbox"
+.required_destination
+  = f.label :fly_destination, "Refused to go the required destination"
+  = f.check_box :fly_destination , :id => "refused_checkbox"
 
-  .refused_from_to{:style => "display:none"}
-    = builder.label :from_to_fly ,"From-To", :class => 'control-label'
-    = builder.text_field :from_to_fly , :placeholder => "Example :Raghuleela Mall - Kandivili station"
+.refused_from_to{:style => "display:none"}
+  = f.label :from_to_fly ,"From-To", :class => 'control-label'
+  = f.text_field :from_to_fly , :placeholder => "Example :Raghuleela Mall - Kandivili station"
 
-  = builder.label :excess_charged
-  = builder.check_box :excess_charged
+= f.label :excess_charged
+= f.check_box :excess_charged
 
-  = builder.label :indecent_behaviour, "Inappropriate Behaviour"
-  = builder.check_box :indecent_behaviour
+= f.label :indecent_behaviour, "Inappropriate Behaviour"
+= f.check_box :indecent_behaviour
 
-  = builder.label :charged_and_allowed_other_complainant , "Charged fare from other passengers (s) and allowed to travel"
-  = builder.check_box :charged_and_allowed_other_complainant
+= f.label :charged_and_allowed_other_complainant , "Charged fare from other passengers (s) and allowed to travel"
+= f.check_box :charged_and_allowed_other_complainant
 
-  = builder.label :charged_for_luggage , "Enter the Amount Excessively Charged for Luggage ", :class => 'control-label'
-  = builder.text_field :indecent_behaviour , :class => 'text_field'
+= f.label :charged_for_luggage , "Enter the Amount Excessively Charged for Luggage ", :class => 'control-label'
+= f.text_field :indecent_behaviour , :class => 'text_field'
 
-  = builder.label :from_to_luggage , "From-To" ,:class => 'control-label'
-  = builder.text_field :from_to_luggage , :class => 'text_field', :placeholder => "Example: Ghatkopar Station - Chembur Station"
+= f.label :from_to_luggage , "From-To" ,:class => 'control-label'
+= f.text_field :from_to_luggage , :class => 'text_field', :placeholder => "Example: Ghatkopar Station - Chembur Station"
 
-  .control{:id => "bus_stop",:style => "display:none"}
-    = builder.label :bus_stop_name , "Bus Stop  Name where Bus didn't Stop", :class => 'control-label' 
-    = builder.text_field :bus_stop_name , :class => 'text_field'
+.control{:id => "bus_stop",:style => "display:none"}
+  = f.label :bus_stop_name , "Bus Stop  Name where Bus didn't Stop", :class => 'control-label' 
+  = f.text_field :bus_stop_name , :class => 'text_field'
 
-  = builder.label :other_complaints , :class => 'control-label'
-  = builder.text_area :other_complaints, size: "30x10" ,:style => "width: 369px; height: 119px;"
+= f.label :other_complaints , :class => 'control-label'
+= f.text_area :other_complaints, size: "30x10" ,:style => "width: 369px; height: 119px;"

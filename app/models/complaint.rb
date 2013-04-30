@@ -6,7 +6,5 @@ class Complaint < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :vehicle 
 
-	accepts_nested_attributes_for :vehicle
-	accepts_nested_attributes_for :user
 
 end
