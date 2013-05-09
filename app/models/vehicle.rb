@@ -1,9 +1,7 @@
 class Vehicle < ActiveRecord::Base
   attr_accessible :number, :vehicle_types 
 
-  has_many :complaints
-
-  accepts_nested_attributes_for :complaints
+  belongs_to :complaint
 
 
 

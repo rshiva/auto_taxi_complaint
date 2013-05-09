@@ -1,0 +1,27 @@
+= form_for @user do |f|
+  -if @user.errors.any?
+    %div{:class => "alert alert-error"}
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this complaint from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+    = f.label :name , "Full Name"
+    = f.text_field :name 
+
+    = f.label :email_id , "Email id"
+    = f.email_field :email_id 
+
+    = f.label :address , "Address"
+    = f.text_area :address, size: "30x10" , :style => "width: 369px; height: 119px;" 
+
+    = f.label :mobile , "Mobile Number"
+    = f.text_field :mobile
+
+
+  %fieldset
+    =render :partial => "complaint_form" , :locals => {:f => f}
+ 
+  .actions
+    = f.submit 'submit',:class => "btn btn-primary"

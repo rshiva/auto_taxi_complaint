@@ -2,8 +2,8 @@ AutoTaxiComplaint::Application.routes.draw do
 
   
   #resources :vehicles
-  root :to => 'complaints#new'
-  resources :complaints
+  root :to => 'users#new'
+  resources :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
